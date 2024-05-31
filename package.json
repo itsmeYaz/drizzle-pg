@@ -7,9 +7,12 @@
 		"typescript": "^5.4.5"
 	},
 	"scripts": {
-		"dev": "tsx watch src/main.ts"
+		"dev": "tsx watch src/main.ts",
+		"db:generate": "drizzle-kit generate",
+		"db:migrate": "tsx src/drizzle/migrate.ts"
 	},
 	"dependencies": {
+		"@neondatabase/serverless": "^0.9.3",
 		"dotenv": "^16.4.5",
 		"drizzle-orm": "^0.30.10",
 		"postgres": "^3.4.4"
